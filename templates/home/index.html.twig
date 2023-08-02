@@ -1,7 +1,177 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Halbig{% endblock %}
+
 
 {% block body %}
-<h1 class='voiture'> Voiture </h1>
+
+<img src="images/bus_dore.jpg" id="image_acceuil" alt="bus doré">
+
+{# <div>
+    <a class="nav-link" href="#">Se connecter</a>
+    <form class="navbar" method="POST" action="">
+        <div>
+            <label for="nom">Nom :</label>
+            <input type="text" name="nom" id="nom" required>
+        </div>
+        <div>
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+            <label for="motdepasse">Mot de passe :</label>
+            <input type="password" name="motdepasse" id="motdepasse" required>
+        </div>
+        <div>
+            <input type="submit" value="Se connecter">
+        </div>
+    </form>
+</div> #}
+
+<div id="reservation_container">
+
+  {# début formulaire réservation #}
+
+  <form class="row g-3" method="POST" action="{{ path('resa') }}">
+
+    <div class="col-md-4">
+
+      <label for="villedepart" class="form-label">De</label>
+      <input type="text" name="villedepart" class="form-control" id="villedepart" required>
+      <ul>
+        <li data-vicopo="#villedepart" data-vicopo-click='{"#villedepart": "code-postal ville"}'>
+          <strong data-vicopo-code-postal></strong>
+          <span data-vicopo-ville></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-md-4">
+      <label for="villearrive" class="form-label">À</label>
+      <input type="text" name="villearrive" class="form-control" id="villearrive" required>
+      <ul>
+        <li data-vicopo="#villearrive" data-vicopo-click='{"#villearrive": "code-postal ville"}'>
+          <strong data-vicopo-code-postal></strong>
+          <span data-vicopo-ville></span>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="col-md-4">
+      <label for="dateresa" class="form-label">Date</label>
+        <input type="date" class="form-control" name="dateresa" id="dateresa" aria-describedby="inputGroupPrepend2" min={{ "now"|date("Y-m-d") }} required>
+    </div>
+
+    <div class="col-md-6">
+      <label for="nbrePassager" class="form-label">Passagers</label>
+      <input type="number" name="nbrePassager" id="nbrePassager" value='1' min="1">
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Chercher</button>
+    </div>
+
+  </form>
+</div>
+
+
+
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quo repellendus cumque fugiat ea, neque dolore explicabo necessitatibus, dicta, commodi similique tenetur! Autem mollitia dolorum neque accusantium! Exercitationem, molestias libero?
+  Nemo, vitae, vel autem error rem quisquam optio voluptatem doloremque praesentium in corporis, illum maxime dicta maiores. Earum debitis iusto nam labore at ea ipsum, harum nesciunt atque? Iusto, cupiditate?
+  Maxime repellendus, voluptatem, autem laborum modi tenetur temporibus consequatur dignissimos consequuntur doloribus obcaecati sed pariatur qui harum animi itaque voluptas? Eaque impedit animi soluta assumenda quasi consectetur exercitationem earum quo?
+  Minus, temporibus nihil illo nisi iure ducimus nulla ratione est laudantium sint vitae recusandae consectetur cupiditate dolorem, asperiores accusamus magni a? Sequi molestiae omnis dolores totam commodi veniam molestias autem!
+  Quod, pariatur? Voluptate in consectetur praesentium hic eum laudantium ab? Voluptatem ut aperiam eaque, blanditiis omnis quaerat nesciunt, eos perferendis sed placeat vitae odit at hic! Debitis dignissimos quisquam dolorum.
+  Illo hic expedita, nostrum, facilis accusamus, beatae nulla deleniti quod enim similique veniam iste. Dicta porro totam repellendus, amet sunt hic, obcaecati eius officiis eos, illo ex et impedit labore.
+  Obcaecati impedit reprehenderit cumque nobis rerum commodi dicta voluptas? Architecto quod suscipit reprehenderit molestias debitis natus illum totam aliquam deleniti. Obcaecati, incidunt ipsum? Cumque dolorem maiores quae. Ex, dicta enim?
+  Impedit, expedita perferendis voluptatem tempore blanditiis atque voluptas, eius quam accusantium tenetur nemo, totam maiores. Fugiat enim alias, nihil deserunt eum animi eligendi dicta ex doloribus ab fugit eveniet quam.
+  Ipsa ut dicta architecto ab itaque dolores, error aut exercitationem eos enim hic voluptatibus, nobis quae doloremque velit quia autem consectetur, iusto odio! A maiores, eligendi natus illum sit cumque!
+  Eligendi ad hic nihil, et consequuntur ipsa. Consectetur eligendi voluptates magni, illum repellendus est unde eos facilis voluptas sequi architecto dolorem laboriosam molestias corporis accusamus, provident quo fuga, molestiae voluptatibus?
+  Voluptate sed cumque a quia maiores mollitia aspernatur ipsum tempore voluptatem accusantium, beatae error impedit incidunt vitae vero nesciunt praesentium laborum ducimus ad ratione voluptatum aut? Cupiditate architecto soluta dolor!
+  Quam placeat quos, praesentium impedit amet neque. Nulla sequi eligendi facere culpa perferendis facilis. Minima rerum sit officia, nesciunt fugit dolore iusto veniam quis, ad maiores ipsum cupiditate earum ipsam!
+  Id doloribus expedita earum, facilis deleniti doloremque beatae animi impedit rem voluptatem autem nam voluptate nobis? Porro voluptates maiores iste, aut voluptas dicta corrupti ratione quos itaque accusamus fuga earum.
+  Totam dolor eos ab molestias rem enim natus qui accusamus distinctio, assumenda accusantium minima, atque beatae et consectetur voluptatem corrupti aspernatur dignissimos aperiam. Veniam asperiores minima quod nulla. Laborum, nemo.
+  Odit dignissimos quae suscipit ipsum. Deleniti quidem labore quod voluptatum reprehenderit voluptas, quo asperiores autem ratione. Ipsa doloremque voluptatum laborum. In explicabo quibusdam sapiente blanditiis saepe deleniti, accusamus repudiandae a.
+  Temporibus doloremque odio ipsa accusantium! Ipsum, quo veniam sit repudiandae natus odit voluptatem atque corporis quibusdam molestiae, nulla et impedit laborum! Minus magni voluptatem iste tempore aliquid enim mollitia nostrum.
+  Quaerat debitis magnam exercitationem, sit enim adipisci expedita fugit? Nostrum debitis optio velit. Dolorum aperiam nihil temporibus eveniet totam aliquid reprehenderit veniam officia velit. Veritatis natus laboriosam illo veniam fuga.
+  Vitae illo impedit eos ipsum quo ducimus, at sit, nulla blanditiis cumque earum eum, explicabo facere quis quia? Temporibus quidem tempora ut? Eos temporibus itaque expedita optio eveniet, id repellat.
+  Reprehenderit quis doloribus laborum! Ipsa consequuntur quibusdam neque placeat dolores sint alias fugit possimus ut illum magnam vero at, necessitatibus porro voluptatem in facere aperiam voluptas quo aliquid adipisci ipsam!
+  Magni, odio magnam similique quidem, placeat et fugit deleniti officiis nemo dolore labore tenetur totam recusandae ipsum iure doloremque, esse eaque? Quasi ratione hic ipsam sed, libero eveniet repellat minus.
+  Expedita cumque aut repellendus cupiditate blanditiis minima deserunt ullam voluptatem ex! Quos id ipsa deserunt pariatur, dolorum exercitationem hic sit ad commodi explicabo ducimus aliquid odit asperiores reprehenderit animi tempora!
+  Consequatur aut neque consequuntur asperiores corrupti, dolorum, explicabo hic accusamus blanditiis necessitatibus laboriosam optio molestiae ipsa dolor quibusdam eaque. Est nostrum voluptatibus totam et. Cupiditate ullam sit ea earum quam!
+  Esse repellat quisquam fugiat maxoris mollitia voluptas voluptate tempora totam impedit eum ea accusantium incidunt excepturi aliquam deserunt earum, commodi officia. Voluptatum, non quidem.
+  Enim dolorem officia, earum voluptate, quis ullam eos iusto molestias beatae expedita facilis neque officiis eveniet quos facere cupiditate doloribus vero rerum sunt modi, nesciunt consequatur assumenda. Voluptas, doloribus doloremque.
+  Veniam natus facilis minima accusamus saepe exceptu vel numquam? Commodi qui explicabo provident adipisci officia, blanditiis atque inventore laboriosam totam, eius cumque fugiat odit neque ipsam!
+  Dolor fugiat autem atque commodi amet mollitia. Consequatur inventore, est quos nam maxime delectus nulla dolores error odio autem recusandae odit soluta quam, numquam repellat temporibus debitis voluptatum fugit dolorum?
+  Excepturi ratione, iure velit architecto quam dicta officia fuga odit quisquam alias nesciunt quo doloremque libero veritatis inventore, eum explicabo fugiat, error ut at asperiores facere? Minus veniam reiciendis nam.
+  Similique quidem voluptate dolorum minima officiis minus eius quisquam architecto nulla, nobis expedita reprehenderit deserunt ut aperiam totam exercitationem nisi, quia laborum? In numquam nobis recusandae veniam architecto ipsum quas!
+</p>
+
+<section> 
+  <h2>Nos véhicules</h2>
+
+{# Carrousel #}
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/bus_blanc.jpg" class="d-block w-100" alt="bus blanc">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/bus2blanc.jpg" class="d-block w-100" alt="2 bus mercedes">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/petitvan.jpg" class="d-block w-100" alt="petit van noir">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+        <div class="carousel-item">
+      <img src="images/intbus.jpg" class="d-block w-100" alt="intérieur bus">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</section>
+
+<script src="/js/vicopo.js"></script>
+<script>
+$('#ville').keyup(function (e) {
+  if(e.keyCode == 13) {
+    var $ville = $(this);
+    $.vicopo($ville.val(), function (input, cities) {
+      if(input == $ville.val() && cities[0]) {
+        $ville.val(cities[0].city).vicopoTargets().vicopoClean();
+      }
+    });
+    e.preventDefault();
+    e.stopPropagation();
+  }
+});
+</script>
 {% endblock %}

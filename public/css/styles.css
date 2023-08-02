@@ -1,3 +1,16 @@
-.voiture{
-    color:red
+#image_acceuil{
+    max-height:60vh; width: 100%;
 }
+
+#reservation_container{
+    margin: 0 auto;
+    max-width: 60%;
+    border: 2px solid blue;
+    padding: 1rem;
+}
+
+#footer{
+    border-top: 2px solid blue;
+    margin: 0 auto;
+}
+#footer>ul{list-style-type: none; display: inline-flex; gap: 1rem; justify-content:center ;}
